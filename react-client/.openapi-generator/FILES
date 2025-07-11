@@ -1,0 +1,16 @@
+.babelrc
+.gitignore
+.openapi-generator-ignore
+.travis.yml
+README.md
+docs/Ticket.md
+docs/TicketControllerApi.md
+git_push.sh
+mocha.opts
+package.json
+src/ApiClient.js
+src/api/TicketControllerApi.js
+src/index.js
+src/model/Ticket.js
+test/api/TicketControllerApi.spec.js
+test/model/Ticket.spec.js
