@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flight-reservation-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flight-reservation-api
+  template:
+    metadata:
+      labels:
+        app: flight-reservation-api
+    spec:
+      containers:
+        - name: flight-reservation-api
+          image: localhost:5000/flight-reservation-api:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: springboot-config
+            - secretRef:
+                name: springboot-secrets
+ 
